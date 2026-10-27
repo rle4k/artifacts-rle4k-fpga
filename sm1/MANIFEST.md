@@ -1,4 +1,4 @@
-﻿# SM-1 — Board-Level Raw Logs and Supporting Records
+# SM-1 — Board-Level Raw Logs and Supporting Records
 Supplementary Material for: "RLE4K: …" (target IEEE TIE), archive id RLE4K-FPGA-2026-08
 Prepared: 2026-10-06. Authoritative index: `V08MAC/reports/2026-08-14-paper-data-consolidated.md` §10 (证据索引).
 No manuscript numbers were recomputed here; this package only collects the raw records that index cites.
@@ -28,7 +28,7 @@ No log content, timestamps, or measured values were altered. Raw round logs unde
 
 ## Notes
 - N1 — Per-round ping gate records: the paper's gate discipline (combined volume §3: burn-in → 25 s settle → 10×`ping 5` = 50/50 → discarded warmup round → post-round 5/5) is recorded per-session in the five `gates/20260814-*.md` session notes (e.g. smooth-feed-ceiling notes record 6× first-pass 50/50 and 4× 49/50-retest-50/50 events, each gate step-by-step), plus one raw ping-gate stdout (`e2_k2_ping_gate.txt`, 50/50 + 5/5 visible). Raw stdout for every individual round's ping was not retained as separate files in the source tree; the session notes are the primary records.
-- N2 — Bitstreams (`.temp/bits/{k1,k2,k4}/*.bit`, ~6 MB each) are not duplicated here; a public reproduction repository including `bitstreams/` (fw `0x80110`) will be opened at the time of manuscript submission. This package's `build/` logs prove the lane-count binding and byte-identity with the images used on 2026-08-14.
+- N2 — Bitstreams (`.temp/bits/{k1,k2,k4}/*.bit`, ~6 MB each) are not duplicated here; a public reproduction repository including `bitstreams/` (fw `0x80110`) is now public at https://github.com/rle4k/decoder-rle4k-fpga (MIT, main branch). This package's `build/` logs prove the lane-count binding and byte-identity with the images used on 2026-08-14.
 - N3 — 24 of the 152 PASS logs have `warmup` in their filename. This is exactly the §10.4 authoritative sample (files with `expected=2403 && blocks_completed=2403`; the volume itself cites e.g. `e5_burst_4k_100_warmup1.txt` inside the §5 regression, line 353). Headline/crash-round files are unaffected.
 - N4 — Excluded by design: everything from the retired simulation-era corpus (00.rules/04 in the writing repo: single-module simulation throughput, single-core LUT figures, dual-core aggregate, old compression-ratio table and its simulation file-table logs). Post-hoc token scan of the whole package for those retired figures: zero hits. Also excluded: 2026-08-08..10 debug-session logs (`pause*`, `k4_sustain_*`, `mlk_graft_*`, `.jou` journals) not cited by §10.
 
