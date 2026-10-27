@@ -1,0 +1,53 @@
+[2026-10-26 00:48:47.174] Local MAC:  ee:ee:ee:ee:b6:4a
+[2026-10-26 00:48:47.175] Target MAC: 00:0a:35:00:01:02
+[2026-10-26 00:48:47.829] Verify: blocks=2403 height=1230083 block_height=512 width=65536 stride=65536 rle_payload=30792855 wire_bytes=30792856 expected_words=157450624
+[2026-10-26 00:48:49.950] Data sent to FPGA.
+[2026-10-26 00:48:49.950] THROUGHPUT frames=20639 payload_bytes=30792856 wire_bytes=31184997 wall_ms=2100.856 payload_MBps=13.978 wire_Mbps=118.752 frames_per_s=9824.091 delay_ms=0 target_mbps=120.000 pace_slips=0 block_period_us=0.000 blocks_paced=0 blocks_late=0 send_batches=35 send_only_ms=0.000 poll_ms=0.000
+[2026-10-26 00:48:49.958] progress decode lines=771/1230083 (0%) done=1
+[2026-10-26 00:48:49.958] FPGA: crc32=0xaf44054 (post-XOR) words=65535 done=1 | lines=771 err_present=0 end_recv=1 filling=0 line_end=0 blk_done=1 info=0x07(rst_n=1,fifo_rdy=1,out_rdy=1,out_vld=0,in_vld=0,code_vld=0,parsed=0) raw=0x03030907
+[2026-10-26 00:48:49.958] DIAG CRC checkpoints:[2026-10-26 00:48:49.958]  [w0]=0x0[2026-10-26 00:48:49.958]  [w128]=0x0[2026-10-26 00:48:49.958]  [w255]=0x0[2026-10-26 00:48:49.958]  [w256]=0x0[2026-10-26 00:48:49.958]  [w32768]=0x0[2026-10-26 00:48:49.958]  [end-128]=0x0[2026-10-26 00:48:49.958]  [end-256]=0x0[2026-10-26 00:48:49.958] 
+[2026-10-26 00:49:10.894] METRICS strip=0 blocks=2403 prepare_ms=653 send_ms=2121 fpga_wait_ms=7 pc_ref_ms=20935 fpga_path_ms=2128 fpga_only=0 err_present=0 err=0x00 status=0x03030907 done=1 fpga_words=65535 expected_words=157450624 budget_sec=600 budget=PASS reason=WORD_COUNT_MISMATCH result=FAIL
+[2026-10-26 00:49:10.894] 
+[2026-10-26 00:49:10.894] ============================================================
+[2026-10-26 00:49:10.894]   THREE-STEP VERIFICATION REPORT
+[2026-10-26 00:49:10.894] ============================================================
+[2026-10-26 00:49:10.894] 
+[Step 1] Word Count (decoded data volume)
+[2026-10-26 00:49:10.894]   FPGA word_count = 65535
+[2026-10-26 00:49:10.894]   PC   word_count = 157450624
+[2026-10-26 00:49:10.894]   Expected bytes  = 1486905344 (23232896 words x 64B)
+[2026-10-26 00:49:10.894]   Result: FAIL
+[2026-10-26 00:49:10.894]   Delta: FPGA has -157385089 words
+[2026-10-26 00:49:10.894]   FPGA decoded ~511 lines (expected 1230083)
+[2026-10-26 00:49:10.894] 
+[Step 2] CRC Checkpoint Comparison (7 points)
+[2026-10-26 00:49:10.894]   Word#    FPGA CRC     PC CRC       Match
+[2026-10-26 00:49:10.894]   ------   ----------   ----------   -----
+[2026-10-26 00:49:10.894]       w0   0x00000000   0x8a729cc9   FAIL
+[2026-10-26 00:49:10.894]     w128   0x00000000   0x43f08860   FAIL
+[2026-10-26 00:49:10.894]     w255   0x00000000   0xcaf346ea   FAIL
+[2026-10-26 00:49:10.894]     w256   0x00000000   0x68c64083   FAIL
+[2026-10-26 00:49:10.894]   w32768   0x00000000   0x954a9583   FAIL
+[2026-10-26 00:49:10.894]    e-128   0x00000000   0x91c9d69b   FAIL
+[2026-10-26 00:49:10.894]    e-256   0x00000000   0xcc8e48d7   FAIL
+[2026-10-26 00:49:10.894]   Result: 0/7 checkpoints match[2026-10-26 00:49:10.894]  -> DIVERGENCE detected!
+[2026-10-26 00:49:10.894]   Divergence between word 0 and word 0
+[2026-10-26 00:49:10.894] 
+[Step 3] Final CRC Result (acceptance caliber = post-XOR)
+[2026-10-26 00:49:10.894]   FPGA crc32       = 0xaf44054  (post-XOR)
+[2026-10-26 00:49:10.894]   PC   crc32       = 0xeb3f04cb  (post-XOR)
+[2026-10-26 00:49:10.894]   FPGA crc_accum   = 0xf50bbfab  (pre-XOR, TB caliber)
+[2026-10-26 00:49:10.894]   PC   crc_accum   = 0x14c0fb34  (pre-XOR, TB caliber)
+[2026-10-26 00:49:10.894]   FPGA done        = 1
+[2026-10-26 00:49:10.894]   Result: FAIL
+[2026-10-26 00:49:10.894]   Analysis: word count mismatch -> CRC covers different data volume
+[2026-10-26 00:49:10.894] 
+============================================================
+[2026-10-26 00:49:10.894]   OVERALL: FAIL  (WORD_COUNT_MISMATCH)
+[2026-10-26 00:49:10.894]   word count mismatch: fpga=65535 expected=157450624 delta=-157385089
+[2026-10-26 00:49:10.894]   Step 1 (Word Count):    FAIL
+[2026-10-26 00:49:10.894]   Step 2 (CRC Checkpoints): 0/7 FAIL
+[2026-10-26 00:49:10.894]   Step 3 (CRC Result):    FAIL
+[2026-10-26 00:49:10.895] ============================================================
+[2026-10-26 00:49:10.895] 
+FPGA decode_status: lines=771 err_present=0 end_recv=1 filling=0 line_end=0 blk_done=1 info=0x07(rst_n=1,fifo_rdy=1,out_rdy=1,out_vld=0,in_vld=0,code_vld=0,parsed=0) raw=0x03030907

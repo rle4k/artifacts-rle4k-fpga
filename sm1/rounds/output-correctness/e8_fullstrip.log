@@ -1,0 +1,47 @@
+[2026-08-09 19:50:14.624] Local MAC:  ee:ee:ee:ee:b6:4a
+[2026-08-09 19:50:14.624] Target MAC: 00:0a:35:00:01:02
+[2026-08-09 19:50:14.732] Verify: blocks=2403 height=1230083 block_height=512 width=65536 stride=65536 rle_payload=30792855 wire_bytes=30792856 expected_words=157450624
+[2026-08-09 19:50:16.327] Data sent to FPGA.
+[2026-08-09 19:50:16.327] THROUGHPUT frames=20639 payload_bytes=30792856 wire_bytes=31184997 wall_ms=1573.183 payload_MBps=18.667 wire_Mbps=158.583 frames_per_s=13119.265 delay_ms=0 target_mbps=250.000 pace_slips=0 block_period_us=640.000 blocks_paced=2402 blocks_late=166 send_batches=4
+[2026-08-09 19:50:16.433] progress decode lines=259/1230083 (0%) done=1
+[2026-08-09 19:50:16.433] FPGA: crc32=0xeb3f04cb (post-XOR) words=157450624 done=1 | lines=259 err_present=0 end_recv=1 filling=0 line_end=0 blk_done=1 info=0x07(rst_n=1,fifo_rdy=1,out_rdy=1,out_vld=0,in_vld=0,code_vld=0,parsed=0) raw=0x01030907
+[2026-08-09 19:50:16.433] DIAG CRC checkpoints:[2026-08-09 19:50:16.433]  [w0]=0x8a729cc9[2026-08-09 19:50:16.433]  [w128]=0x43f08860[2026-08-09 19:50:16.433]  [w255]=0xcaf346ea[2026-08-09 19:50:16.433]  [w256]=0x68c64083[2026-08-09 19:50:16.433]  [w32768]=0x954a9583[2026-08-09 19:50:16.433]  [end-128]=0x91c9d69b[2026-08-09 19:50:16.433]  [end-256]=0xcc8e48d7[2026-08-09 19:50:16.433] 
+[2026-08-09 19:50:37.027] METRICS strip=0 blocks=2403 prepare_ms=107 send_ms=1595 fpga_wait_ms=105 pc_ref_ms=20593 fpga_path_ms=1700 fpga_only=0 err_present=0 err=0x00 status=0x01030907 done=1 fpga_words=157450624 expected_words=157450624 budget_sec=600 budget=PASS reason=OK result=PASS
+[2026-08-09 19:50:37.027] 
+[2026-08-09 19:50:37.027] ============================================================
+[2026-08-09 19:50:37.027]   THREE-STEP VERIFICATION REPORT
+[2026-08-09 19:50:37.027] ============================================================
+[2026-08-09 19:50:37.027] 
+[Step 1] Word Count (decoded data volume)
+[2026-08-09 19:50:37.027]   FPGA word_count = 157450624
+[2026-08-09 19:50:37.027]   PC   word_count = 157450624
+[2026-08-09 19:50:37.027]   Expected bytes  = 1486905344 (23232896 words x 64B)
+[2026-08-09 19:50:37.027]   Result: PASS
+[2026-08-09 19:50:37.027] 
+[Step 2] CRC Checkpoint Comparison (7 points)
+[2026-08-09 19:50:37.027]   Word#    FPGA CRC     PC CRC       Match
+[2026-08-09 19:50:37.027]   ------   ----------   ----------   -----
+[2026-08-09 19:50:37.027]       w0   0x8a729cc9   0x8a729cc9   PASS
+[2026-08-09 19:50:37.027]     w128   0x43f08860   0x43f08860   PASS
+[2026-08-09 19:50:37.027]     w255   0xcaf346ea   0xcaf346ea   PASS
+[2026-08-09 19:50:37.027]     w256   0x68c64083   0x68c64083   PASS
+[2026-08-09 19:50:37.027]   w32768   0x954a9583   0x954a9583   PASS
+[2026-08-09 19:50:37.027]    e-128   0x91c9d69b   0x91c9d69b   PASS
+[2026-08-09 19:50:37.027]    e-256   0xcc8e48d7   0xcc8e48d7   PASS
+[2026-08-09 19:50:37.027]   Result: 7/7 checkpoints match[2026-08-09 19:50:37.027]  -> CRC algorithm + data path verified
+[2026-08-09 19:50:37.027] 
+[Step 3] Final CRC Result (acceptance caliber = post-XOR)
+[2026-08-09 19:50:37.027]   FPGA crc32       = 0xeb3f04cb  (post-XOR)
+[2026-08-09 19:50:37.027]   PC   crc32       = 0xeb3f04cb  (post-XOR)
+[2026-08-09 19:50:37.027]   FPGA crc_accum   = 0x14c0fb34  (pre-XOR, TB caliber)
+[2026-08-09 19:50:37.027]   PC   crc_accum   = 0x14c0fb34  (pre-XOR, TB caliber)
+[2026-08-09 19:50:37.027]   FPGA done        = 1
+[2026-08-09 19:50:37.027]   Result: PASS
+[2026-08-09 19:50:37.027] 
+============================================================
+[2026-08-09 19:50:37.027]   OVERALL: ALL PASS  (OK)
+[2026-08-09 19:50:37.027]   done=1 words=157450624==expected crc32=0xeb3f04cb (post-XOR) == PC reference diag=7/7 status[lines=259 err_present=0 end_recv=1 filling=0 line_end=0 blk_done=1 info=0x07(rst_n=1,fifo_rdy=1,out_rdy=1,out_vld=0,in_vld=0,code_vld=0,parsed=0) raw=0x01030907]
+[2026-08-09 19:50:37.027] ============================================================
+[2026-08-09 19:50:37.027] 
+FPGA decode_status: lines=259 err_present=0 end_recv=1 filling=0 line_end=0 blk_done=1 info=0x07(rst_n=1,fifo_rdy=1,out_rdy=1,out_vld=0,in_vld=0,code_vld=0,parsed=0) raw=0x01030907
+

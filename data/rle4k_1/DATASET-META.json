@@ -1,0 +1,19 @@
+{
+  "files": 2403,
+  "bytes_total": 30888975,
+  "structure": {
+    "blocks": 2403,
+    "block_height": 512,
+    "width_stride": 65536,
+    "height": 1230083
+  },
+  "per_round_on_wire": {
+    "frames": 24334,
+    "payload_bytes": 30794948,
+    "wire_bytes_incl_ethernet_overhead": 31356218
+  },
+  "decoded_words": 157450624,
+  "word_bytes": 64,
+  "expansion_ratio": 321.367,
+  "provenance": "regenerable end-to-end from the 64 public Gerber samples (DOI 10.21227/t0cy-rb10) with the public reference codec rle4k/encoder-rle4k-cpu; geometry per paper C=1920,R=512,N=32"
+}

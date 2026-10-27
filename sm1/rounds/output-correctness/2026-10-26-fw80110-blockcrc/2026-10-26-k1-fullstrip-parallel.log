@@ -1,0 +1,15 @@
+[2026-10-26 00:54:31.395] Local MAC:  ee:ee:ee:ee:b6:4a
+[2026-10-26 00:54:31.396] Target MAC: 00:0a:35:00:01:02
+[2026-10-26 00:54:32.018] Stream: blocks=2403 height=1230083 block_height=512 width=65536 stride=65536 rle_payload=30792855 wire_bytes=30792856 source=10078912512
+[2026-10-26 00:54:32.039] STREAM_START sent
+[2026-10-26 00:54:32.039] PARALLEL K-send: STREAM_BLOCK_START per block
+[2026-10-26 00:54:32.039] PARALLEL pipeline hold=2403 depth_cfg=4 K=4 (send-only) sendqueue=1 chunk_kib=1024 flush_each_block=0 unpaced_gap_us=0 serial_assign=0 blocks=2403
+[2026-10-26 00:54:34.154] PARALLEL harvest done got=0 send_only_ms=2115.6 poll_ms=0.0 wall_ms=2115.6 send_batches=35 pause_seen=0
+[2026-10-26 00:54:34.154] STREAM_DATA: pkts=24334 bytes=30792856 data_ms=2115.6
+[2026-10-26 00:54:34.154] THROUGHPUT frames=24334 payload_bytes=30794948 wire_bytes=31356218 wall_ms=2115.570 payload_MBps=13.882 wire_Mbps=118.573 frames_per_s=11502.335 delay_ms=0 target_mbps=120.000 pace_slips=0 block_period_us=0.000 blocks_paced=2403 blocks_late=0 send_batches=35 send_only_ms=2115.570 poll_ms=0.000
+[2026-10-26 00:54:34.154] STREAM_END sent
+[2026-10-26 00:54:34.154] Send: blocks=2403 compressed=30792855 source=10078912512 elapsed_ms=2758.0 avg_block_ms=1.1
+[2026-10-26 00:54:34.154] Throughput: compressed_Mbps=89.3 source_Mbps=29235.1
+[2026-10-26 00:54:34.156] Decoder: done=0 err=0 words=109 addr=0x0
+[2026-10-26 00:54:34.156] Send complete.
+[2026-10-26 00:54:34.156] STRIP_BENCH blocks=2403 elapsed_ms=2758.0 max=1000 ideal=400 result_max=FAIL result_ideal=FAIL

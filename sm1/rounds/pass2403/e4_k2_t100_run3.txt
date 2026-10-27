@@ -1,0 +1,15 @@
+﻿[2026-08-14 10:28:45.235] Local MAC:  ee:ee:ee:ee:b6:4a
+[2026-08-14 10:28:45.235] Target MAC: 00:0a:35:00:01:02
+[2026-08-14 10:28:45.350] Verify: blocks=2403 height=1230083 block_height=512 width=65536 stride=65536 rle_payload=30792855 wire_bytes=30792856 expected_words=157450624
+[2026-08-14 10:28:45.371] PARALLEL K-send: STREAM_BLOCK_START per block (send-only, no CRC poll)
+[2026-08-14 10:28:45.371] PARALLEL pipeline hold=2403 depth_cfg=4 K=4 (send-only) sendqueue=1 chunk_kib=1024 flush_each_block=0 unpaced_gap_us=0 serial_assign=0 blocks=2403
+[2026-08-14 10:28:47.908] PARALLEL harvest done got=0 send_only_ms=2536.5 poll_ms=0.0 wall_ms=2536.5 send_batches=35 pause_seen=0
+[2026-08-14 10:28:47.908] Data sent to FPGA.
+[2026-08-14 10:28:47.908] THROUGHPUT frames=24334 payload_bytes=30794948 wire_bytes=31356218 wall_ms=2536.534 payload_MBps=11.578 wire_Mbps=98.895 frames_per_s=9593.408 delay_ms=0 target_mbps=100.000 pace_slips=0 block_period_us=0.000 blocks_paced=2403 blocks_late=0 send_batches=35 send_only_ms=2536.534 poll_ms=0.000
+[2026-08-14 10:28:47.915] PARALLEL_INFO got=1 K=4 blocks_completed=2403 expected=2403 end_sync_ms=7.3 decode_complete_ms=2543.8
+[2026-08-14 10:28:47.915] LANE_OVERLAP ge2_cyc=5436297 ge3_cyc=0 ge4_cyc=5436297 sample_cyc=39711132 ge2_pct=13.69 ge3_pct=0.00 ge4_pct=13.69
+[2026-08-14 10:28:47.916] PARALLEL RESULT PASS mode=send_only blocks=2403 wall_ms=2536.53 send_only_ms=2536.53 poll_ms=0.00 end_sync_ms=7.26 decode_complete_ms=2543.80 send_batches=35 (MAC+BP; CRC gate off -- triage: --verify-block-crc)
+[2026-08-14 10:28:47.916] METRICS strip=0 blocks=2403 prepare_ms=114 send_ms=2537 fpga_wait_ms=7 pc_ref_ms=0 fpga_path_ms=2544 fpga_only=0 err_present=0 err=0x00 status=0x00000000 done=1 fpga_words=0 expected_words=157450624 budget_sec=600 budget=PASS reason=SEND_ONLY result=PASS
+
+#DRIVER exit_code=0 host_elapsed_ms=2704
+#DRIVER post_ping=5/5
